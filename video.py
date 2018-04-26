@@ -9,15 +9,14 @@ Client = discord.Client()
 client = commands.Bot(command_prefix = ";")
 @client.event
 async def on_ready():
-    print("Bot Is Online")
-    await clinet.change_presence(game=dsicord.Game(name="Videos"))
+    print("Thankyou For Using Jackaboi Beta Bot!")
+    await client.change_presence(game=discord.Game(name="VIDEOS"))
 
-    @cleint.event
-    async def on_message(message):
-        if message.content.startswith(';hello'):
-            msg = 'Hello {0.author.mention} How Are You Todat'.format(message)
-            await client.send_message(message.channel, msg)
+@client.event
+async def on_message(message):
+    if message.content.startswith(';hello'):
+        msg = 'Hello {0.author.mention} How Are You Today'.format(message)
+        await client.send_message(message.channel, msg)
 
-
-
+    
 client.run(os.getenv('TOKEN'))
