@@ -1,1 +1,1 @@
-worker: pyhton video.py
+worker: python video.py
